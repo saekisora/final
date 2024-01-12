@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>作品登録確認</h1>
-    <button type="button" onclick="location.href='index.php'" class=back>戻る</button><br>
+    <button type="button" onclick="location.href='new.php'" class=back>戻る</button><br>
     <hr>
     <p>
         <form action="new_finish" method="post">
