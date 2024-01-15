@@ -9,27 +9,26 @@
     <?php require 'db_connect.php'; ?>
 
     <h1>映画鑑賞システム</h1>
+    <button type="button" onclick="location.href='new.php'" class="new">作品登録</button>
     <hr>
 
     <?php
     $pdo=new PDO($connect, USER, PASS);
     $noinfomation='作品が登録されていません<br>';
-    echo '<h3>映画</h3>';
     $film=$pdo->query('select * from Film');
     if($film->rowCount()==0){
         echo $noinfomation;
     }else{
         foreach($film as $row){
             echo '<dl>';
-            echo '<dt>',$row['name'],'</dt>';
+            echo '<dt>',$row['name'],'　<button type="button" onclick="location.href=`update.php?id=',$row['id'],'`">更新</button>　<button type="button" onclick="location.href=`delete.php?id=',$row['id'],'`">削除</button></dt>';
             echo '<dd>',$row['date'],'</dd>';
             echo '<dd>',$row['feelings'],'</dd>';
             echo '<dd>',$row['link'],'</dd>';
             echo '</dl>';
+            echo '-------------------------------------------------------------------<br>';
         }
     }
     ?>
-
-    <button type="button" onclick="location.href='new.php'" class="new">+</button>
 </body>
 </html>

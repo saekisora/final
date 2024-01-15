@@ -7,15 +7,17 @@
 </head>
 <body>
     <?php require 'db_connect.php'; ?>
+
+    <h1>作品削除完了</h1>
+    <hr>
+
     <?php
     $pdo=new PDO($connect, USER, PASS);
-    $film=$pdo->prepare('insert into Film values(null,?,?,?,?)');
-    $film->execute([$_POST['name'],$_POST['link'],$_POST['date'],$_POST['feelings']]);
+    $sql=$pdo->prepare('delete from Film where id=?');
+    $sql->execute([$_GET['id']]);
     ?>
 
-    <h1>作品登録完了</h1>
-    <hr>
-    <font color="ff0000"><h3>登録しました</h3></font>
+    <font color="ff0000"><h3>削除しました</h3></font>
     <button type=button onclick="location.href='index.php'">作品一覧へ</button>
 </body>
 </html>
