@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>映画鑑賞システム</title>
 </head>
 <body>
     <?php require 'db_connect.php'; ?>
     <h1>作品更新</h1>
-    <button type="button" onclick="location.href='index.php'" class=back>戻る</button><br>
+    <button type="button" onclick="location.href='index.php'" class="back">戻る</button><br>
     <hr>
     <p>
         <form action="update_check.php" method="post">
@@ -25,7 +26,7 @@
             }
             ?>
             <p>
-                <button type="submit">確認</button>
+                <button type="submit" class="next">確認</button>
             </p>
         </form>
     </p>

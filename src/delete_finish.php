@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>映画鑑賞システム</title>
 </head>
 <body>
@@ -18,6 +19,6 @@
     ?>
 
     <font color="ff0000"><h3>削除しました</h3></font>
-    <button type=button onclick="location.href='index.php'">作品一覧へ</button>
+    <button type=button onclick="location.href='index.php'" class="new">作品一覧へ</button>
 </body>
 </html>

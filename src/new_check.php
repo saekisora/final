@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>映画鑑賞システム</title>
 </head>
 <body>
     <h1>作品登録確認</h1>
-    <button type="button" onclick="location.href='new.php'" class=back>戻る</button><br>
+    <button type="button" onclick="location.href='new.php'" class="back">戻る</button><br>
     <hr>
     <p>
         <form action="new_finish" method="post">
@@ -19,7 +20,7 @@
             echo '<input type="hidden" name="feelings" value="',$_POST['feelings'],'">';
             ?>
             <p>
-                <button type="submit">登録</button>
+                <button type="submit" class="next">登録</button>
             </p>
         </form>
     </p>
